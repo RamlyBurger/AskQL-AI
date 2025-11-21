@@ -1,0 +1,66 @@
+=== AGENT CONTINUATION PROMPT ===
+
+Agent Mode Multi-Step Analysis
+
+⚠️ CRITICAL RESTRICTIONS (MUST follow - violations will FAIL):
+- ABSOLUTELY NO: ALTER, DROP, CREATE, TRUNCATE commands
+- ABSOLUTELY NO: CTEs (WITH clauses)  
+- ABSOLUTELY NO: Window functions (OVER/PARTITION BY/LAG/LEAD)
+- ONLY ALLOWED: SELECT, INSERT, UPDATE, DELETE
+- For data insertion: use **ONE** INSERT statement with multiple VALUES rows
+- NEVER add columns or modify table structure - work with existing columns only
+
+Original Question: Continuously scan data for duplicate data, then remove them to keep the dataset clean. @user_1_Walmart_Sales 
+
+COMPLETION DECISION: Should we stop or continue?
+
+Original User Question: "Continuously scan data for duplicate data, then remove them to keep the dataset clean. @user_1_Walmart_Sales "
+Operations Executed So Far: 1
+
+Previous Results:
+[
+  {
+    "step": 1,
+    "operation": "DELETE",
+    "details": "Deleted 3 records",
+    "success": true
+  }
+]
+
+CRITICAL RULES - Apply in this exact order:
+
+1. **EXPLICIT NUMBER REQUESTS** ("run 5 queries", "execute 10 operations"):
+   - If user specified a number AND 1 < that number → Continue
+   - If user specified a number AND 1 >= that number → STOP
+
+2. **SPECIFIC DATA QUESTIONS** (User asks for ONE specific thing):
+   Examples: "show total sales for each store", "display top 5 stores", "count of customers"
+   
+   ⚠️ CRITICAL CHECK - Does the current result ALREADY answer the user's specific question?
+   - Review the user's question: "Continuously scan data for duplicate data, then remove them to keep the dataset clean. @user_1_Walmart_Sales "
+   - Review the last result: Does it contain the data the user asked for?
+   - If YES (question is answered) → STOP IMMEDIATELY
+   - If NO (question not answered yet) → Continue
+   
+   DO NOT add "more insights" or "additional analysis" if the question is already answered!
+
+3. **DATA INSERTION/MODIFICATION REQUESTS**:
+   - If user asked to insert/create data and insertion was successful → STOP
+   - If user asked to insert/create data but insertion failed → Continue with alternative
+
+4. **EXPLORATORY/ANALYSIS REQUESTS** (Vague, asking for insights/patterns):
+   Examples: "analyze this data", "show me patterns", "explore the dataset"
+   - If 1 >= 3 → STOP (sufficient exploration)
+   - If 1 < 3 → Continue with different angle
+
+IMPORTANT: Analyze "Continuously scan data for duplicate data, then remove them to keep the dataset clean. @user_1_Walmart_Sales ":
+- Is it asking for ONE specific thing that can be directly answered? (If YES and we have it → STOP)
+- Or is it exploratory/vague asking for general insights? (If YES → Continue until 3 queries)
+
+RESPONSE FORMAT:
+- If STOP: Say only "OPERATION_COMPLETE"
+- If CONTINUE: Brief reason (1 sentence) + "MULTI_STEP_QUERY: Step 2" + SQL query
+
+Your decision:
+
+=== END PROMPT ===

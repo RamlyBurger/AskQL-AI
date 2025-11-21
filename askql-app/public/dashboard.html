@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AskQL AI - Unlock Your Data's Full Potential</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load D3.js for the interactive chart -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="fixed top-4 left-4 right-4 z-50 max-w-6xl mx-auto rounded-xl bg-white/70 backdrop-blur-lg border border-gray-200/80 shadow-lg"
+    >
+      <nav class="w-full px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <img
+              src="/askql_logo_rect.png"
+              alt="AskQL AI Logo"
+              class="h-10 w-auto rounded-md"
+            />
+          </div>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex md:items-center md:space-x-8">
+            <a
+              href="#features"
+              class="font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              >Features</a
+            >
+            <a
+              href="#demo"
+              class="font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              >Demo</a
+            >
+            <a
+              href="#integrations"
+              class="font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              >Integrations</a
+            >
+            <a
+              href="#pricing"
+              class="font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              >Pricing</a
+            >
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex items-center space-x-4">
+            <a
+              href="#"
+              class="hidden md:inline-block font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              >Sign In</a
+            >
+            <a
+              href="#"
+              class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Get Started Free
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="overflow-x-hidden">
+      <!-- Hero Section -->
+      <section class="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="hero-gradient-blur"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center">
+            <!-- --- REPLACED: Animated Badge --- -->
+            <div
+              class="animate-on-scroll is-visible bg-transparent relative h-fit w-fit p-[1px] overflow-hidden rounded-[1.75rem] inline-flex"
+            >
+              <div
+                id="badge-light-container"
+                class="animated-badge-light-container"
+              >
+                <div
+                  id="badge-light-blob"
+                  class="animated-badge-light-blob"
+                ></div>
+              </div>
+              <div
+                class="relative border backdrop-blur-xl flex items-center justify-center w-full text-sm antialiased h-fit border-slate-300 bg-white px-4 py-1 text-black rounded-[calc(1.75rem*0.96)]"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="font-medium text-gray-900"
+                    >New in v2.0: AI Agent Mode</span
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-sparkles text-purple-600"
+                  >
+                    <path
+                      d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+                    />
+                    <path d="M5 3v4" />
+                    <path d="M19 17v4" />
+                    <path d="M3 5h4" />
+                    <path d="M17 19h4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- --- END: Animated Badge --- -->
+
+            <h1
+              class="animate-on-scroll is-visible delay-100 mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight"
+            >
+              Chat with Your Data.
+              <br class="hidden md:block" />
+              <span
+                class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                >Get Answers Instantly.</span
+              >
+            </h1>
+
+            <p
+              class="animate-on-scroll is-visible delay-200 mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-600"
+            >
+              AskQL is the conversational AI platform that lets you query and analyze
+              your data using natural language. Ask questions, get insights, and visualize
+              results instantly.
+            </p>
+
+            <div
+              class="animate-on-scroll is-visible delay-300 mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+            >
+              <a
+                href="#"
+                class="w-full sm:w-auto rounded-lg bg-blue-600 px-6 py-3 text-lg font-medium text-white shadow-lg hover:bg-blue-700 transition-all transform hover:-translate-y-0.5"
+              >
+                Start Your Free Trial
+              </a>
+              <a
+                href="#demo"
+                class="w-full sm:w-auto rounded-lg bg-white px-6 py-3 text-lg font-medium text-gray-700 shadow-lg ring-1 ring-gray-200 hover:bg-gray-100 hover:ring-gray-300 transition-all transform hover:-translate-y-0.5"
+              >
+                Watch Demo Video
+              </a>
+            </div>
+
+            <!-- --- NEW: Floating Chat Input --- -->
+            <div
+              id="floating-chat-container"
+              class="animate-on-scroll is-visible delay-500 mt-16 max-w-4xl mx-auto px-4"
+            >
+              <!-- Changed from max-w-3xl -->
+
+              <!-- --- NEW: Agent Mode Dropdown Menu (hidden by default) --- -->
+              <div id="agent-mode-dropdown" class="hidden">
+                <div class="p-2">
+                  <span class="text-sm font-medium text-gray-700 px-2"
+                    >Select Mode</span
+                  >
+                </div>
+                <div class="border-t border-gray-200 p-2">
+                  <!-- Agent Mode Option -->
+                  <button
+                    role="menuitem"
+                    class="w-full flex items-center justify-between text-left p-2 rounded-lg hover:bg-gray-100"
+                  >
+                    <div class="flex items-center space-x-3">
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
+                        />
+                      </svg>
+                      <div>
+                        <span class="font-medium text-gray-900"
+                          >Agent Mode</span
+                        >
+                        <p class="text-sm text-gray-500">
+                          Interactive operations
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-medium text-gray-500 border border-gray-300 rounded px-1.5 py-0.5"
+                      >Ctrl+1</span
+                    >
+                  </button>
+                  <!-- Ask Mode Option -->
+                  <button
+                    role="menuitem"
+                    class="w-full flex items-center justify-between text-left p-2 rounded-lg hover:bg-gray-100"
+                  >
+                    <div class="flex items-center space-x-3">
+                      <svg
+                        class="w-5 h-5 text-gray-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <div>
+                        <span class="font-medium text-gray-900">Ask Mode</span>
+                        <p class="text-sm text-gray-500">Ask your data</p>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-medium text-gray-500 border border-gray-300 rounded px-1.5 py-0.5"
+                      >Ctrl+2</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <!-- The main container, changed to a <form> -->
+              <div
+                data-v-b80857f1=""
+                data-v-1157d46a=""
+                class="create-project-input-container"
+              >
+              <div class="rounded-2xl p-0.5">
+                <form
+                  id="chat-form"
+                  class="relative w-full rounded-2xl bg-white shadow-xl border border-gray-400 p-4 flex flex-col min-h-[180px] justify-between"
+                >
+                  <!-- Changed min-h from 150px to 180px -->
+
+                  <!-- Top part: Replaced with functional textarea -->
+                  <textarea
+                    id="chat-textarea"
+                    name="query"
+                    rows="4"
+                    class="w-full bg-transparent border-none focus:ring-0 focus:outline-none resize-none overflow-y-hidden text-gray-800 placeholder-gray-500"
+                    placeholder=""
+                  ></textarea>
+                  <!-- Changed rows from 3 to 4 -->
+
+                  <!-- Bottom part: Buttons -->
+                  <div class="w-full flex justify-between items-center mt-2">
+                    <!-- Left button: Agent Mode -->
+                    <button
+                      id="agent-mode-button"
+                      type="button"
+                      class="flex items-center space-x-2 rounded-lg border border-gray-400 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      <!-- Agent Icon -->
+                      <svg
+                        class="w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.624L16.5 21.75l-.398-1.126a3.375 3.375 0 00-2.456-2.456L12.5 18l1.126-.398a3.375 3.375 0 002.456-2.456L16.5 14.25l.398 1.126a3.375 3.375 0 002.456 2.456L20.5 18l-1.126.398a3.375 3.375 0 00-2.456 2.456z"
+                        />
+                      </svg>
+                      <span id="agent-mode-text">Agent Mode</span>
+                      <!-- Dropdown Icon -->
+                      <svg
+                        class="w-4 h-4 text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+
+                    <!-- Right icons -->
+                    <div class="flex items-center space-x-2">
+                      <!-- Sparkle Icon -->
+                      <button
+                        class="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Paperclip Icon -->
+                      <button
+                        type="button"
+                        class="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94a3 3 0 114.243 4.243l-8.378 8.378a1.5 1.5 0 01-2.12-2.12l5.656-5.656"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Mic Icon -->
+                      <button
+                        type="button"
+                        class="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15a3 3 0 01-3-3V4.5a3 3 0 016 0v7.5a3 3 0 01-3 3z"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Send Button -->
+                      <button
+                        type="submit"
+                        class="h-9 w-9 rounded-lg flex items-center justify-center bg-gray-700 text-white hover:bg-gray-900 transition-colors"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l15.97-5.49c.533-.184.94.226.774.746l-5.49 15.97c-.18.532-.604.532-.78.006L7.02 11.02 1.946 9.315z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- --- End Floating Chat Input --- -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Powered By Section -->
+      <section class="py-16 bg-white">
+        <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+          <h2
+            class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            AskQL AI Architecture
+          </h2>
+          <p class="mt-4 text-xl text-gray-600">
+            Built on a robust architecture combining advanced AI models with
+            seamless data integration to deliver real-time insights and
+            analytics.
+          </p>
+        </div>
+        <div class="mt-16 animate-on-scroll">
+          <div class="relative mx-auto w-full max-w-[980px] lg:min-h-[652.55px]">
+            <img
+              alt="src"
+              loading="eager"
+              decoding="async"
+              data-nimg="fill"
+              style="
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0%;
+                top: 50%;
+                right: 0;
+                bottom: 0;
+                object-fit: contain;
+                color: transparent;
+                transform: translate(-40%, -52%);
+              "
+              sizes="100vw"
+              src="/partners-left.png"
+              fetchpriority="high"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 859 572"
+            >
+              <path
+                fill="#D5D7E9"
+                fill-opacity="0.77"
+                d="M483 144.5a.5.5 0 010-1v1zm121.652-.5v-.5.5zM670 42.5h-13.348v-1H670v1zM633.152 66v50h-1V66h1zm-28.5 78.5H483v-1h121.652v1zm28.5-28.5c0 15.74-12.76 28.5-28.5 28.5v-1c15.188 0 27.5-12.312 27.5-27.5h1zm23.5-73.5c-12.979 0-23.5 10.521-23.5 23.5h-1c0-13.531 10.969-24.5 24.5-24.5v1z"
+                class="svg-elem-1"
+              ></path>
+              <path
+                fill="#D5D7E9"
+                fill-opacity="0.77"
+                d="M483 211.5a.5.5 0 000 1v-1zm121.652.5v.5-.5zM670 313.5h-13.348v1H670v-1zM633.152 290v-50h-1v50h1zm-28.5-78.5H483v1h121.652v-1zm28.5 28.5c0-15.74-12.76-28.5-28.5-28.5v1c15.188 0 27.5 12.312 27.5 27.5h1zm23.5 73.5c-12.979 0-23.5-10.521-23.5-23.5h-1c0 13.531 10.969 24.5 24.5 24.5v-1z"
+                class="svg-elem-2"
+              ></path>
+              <path
+                fill="#D5D7E9"
+                fill-opacity="0.77"
+                d="M374 144.5a.5.5 0 000-1v1zm-121.652-.5v-.5.5zM187 42.5h13.348v-1H187v1zM223.848 66v50h1V66h-1zm28.5 78.5H374v-1H252.348v1zm-28.5-28.5c0 15.74 12.76 28.5 28.5 28.5v-1c-15.188 0-27.5-12.312-27.5-27.5h-1zm-23.5-73.5c12.979 0 23.5 10.521 23.5 23.5h1c0-13.531-10.969-24.5-24.5-24.5v1z"
+                class="svg-elem-3"
+              ></path>
+              <path
+                fill="#D5D7E9"
+                fill-opacity="0.77"
+                d="M374 211.5a.5.5 0 010 1v-1zm-121.652.5v.5-.5zM187 313.5h13.348v1H187v-1zm36.848-23.5v-50h1v50h-1zm28.5-78.5H374v1H252.348v-1zm-28.5 28.5c0-15.74 12.76-28.5 28.5-28.5v1c-15.188 0-27.5 12.312-27.5 27.5h-1zm-23.5 73.5c12.979 0 23.5-10.521 23.5-23.5h1c0 13.531-10.969 24.5-24.5 24.5v-1z"
+                class="svg-elem-4"
+              ></path>
+              <path
+                stroke="#D5D7E9"
+                stroke-linecap="round"
+                stroke-opacity="0.77"
+                d="M185 176h491"
+                class="svg-elem-5"
+              ></path>
+              <path
+                stroke="#D5D7E9"
+                stroke-linecap="round"
+                stroke-opacity="0.77"
+                d="M430 247v48.75c0 13.255-10.745 24-24 24h-42c-13.255 0-24 10.745-24 24V349"
+                class="svg-elem-6"
+              ></path>
+              <path
+                stroke="#D5D7E9"
+                stroke-linecap="round"
+                stroke-opacity="0.77"
+                d="M430 247v48.75c0 13.255 10.745 24 24 24h42c13.255 0 24 10.745 24 24V349"
+                class="svg-elem-7"
+              ></path>
+              <path
+                stroke="#D5D7E9"
+                stroke-linecap="round"
+                stroke-opacity="0.77"
+                d="M430 162v188"
+                class="svg-elem-8"
+              ></path>
+              <path
+                stroke="url(#paint0_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M227 176h122"
+                class="svg-elem-9"
+              ></path>
+              <path
+                stroke="url(#paint1_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M430 179v119"
+                class="svg-elem-10"
+              ></path>
+              <path
+                stroke="url(#paint2_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M430 298v49"
+                class="svg-elem-11"
+              ></path>
+              <path
+                stroke="url(#paint3_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M633 177l-179-1"
+                class="svg-elem-12"
+              ></path>
+              <path
+                stroke="url(#paint4_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M408 320h-43"
+                class="svg-elem-13"
+              ></path>
+              <path
+                stroke="url(#paint5_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M486.5 320l7.274-.539c11.497-.851 22.02 6.465 25.226 17.539v0"
+                class="svg-elem-14"
+              ></path>
+              <path
+                stroke="url(#paint6_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M600 144H496"
+                class="svg-elem-15"
+              ></path>
+              <path
+                stroke="url(#paint7_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M632.538 60.996v52.009"
+                class="svg-elem-16"
+              ></path>
+              <path
+                stroke="url(#paint8_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M274 212h95"
+                class="svg-elem-17"
+              ></path>
+              <path
+                stroke="url(#paint9_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M224 290v-50"
+                class="svg-elem-18"
+              ></path>
+              <path
+                stroke="url(#paint10_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M184 176h67"
+                class="svg-elem-19"
+              ></path>
+              <path
+                stroke="url(#paint11_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M224 63v54"
+                class="svg-elem-20"
+              ></path>
+              <path
+                stroke="url(#paint12_radial_1736_2)"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M633.151 263v-22c0-16.016-12.983-29-29-29H603"
+                class="svg-elem-21"
+              ></path>
+              <g filter="url(#filter0_bdddddd_1736_2)">
+                <circle
+                  cx="339"
+                  cy="370"
+                  r="22"
+                  fill="#F1F2FD"
+                  class="svg-elem-22"
+                ></circle>
+                <circle
+                  cx="339"
+                  cy="370"
+                  r="22"
+                  fill="url(#pattern0_1736_2)"
+                  fill-opacity="0.28"
+                  class="svg-elem-23"
+                ></circle>
+              </g>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M348 379.059h-11c-3.3 0-4.95 0-5.975-1.026-1.025-1.025-1.025-2.675-1.025-5.974v-11"
+                class="svg-elem-24"
+              ></path>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M333 370.059h.009m2.989 0h.009m2.989 0h.009m2.99 0h.009m2.989 0h.009m2.989 0H348"
+                class="svg-elem-25"
+              ></path>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M333 373.059c.673 1.121 1.587 2 2.993 2 5.943 0 2.602-12 8.989-12 1.416 0 2.324.884 3.018 2"
+                class="svg-elem-26"
+              ></path>
+              <path
+                fill="#303C67"
+                d="M318.092 421l-3.934-9.8h1.19l3.99 9.8h-1.246zm-7.966 0l3.99-9.8h1.204l-3.934 9.8h-1.26zm1.89-2.786v-1.064h5.446v1.064h-5.446zm8.439 2.786v-7h1.05l.07 1.288V421h-1.12zm4.914 0v-3.584h1.12V421h-1.12zm0-3.584c0-.691-.08-1.218-.238-1.582-.159-.364-.378-.611-.658-.742-.28-.14-.598-.21-.952-.21-.616 0-1.097.219-1.442.658-.336.429-.504 1.041-.504 1.834h-.546c0-.737.107-1.372.322-1.904.214-.532.527-.938.938-1.218.41-.28.905-.42 1.484-.42.55 0 1.026.112 1.428.336.41.215.728.56.952 1.036.233.476.345 1.101.336 1.876v.336h-1.12zm7.204 3.584l-.056-1.148v-2.548c0-.551-.06-1.003-.182-1.358-.121-.364-.312-.639-.574-.826-.261-.187-.602-.28-1.022-.28-.382 0-.714.079-.994.238-.27.149-.494.392-.672.728l-1.008-.392c.178-.327.392-.607.644-.84.252-.243.546-.425.882-.546a3.144 3.144 0 011.148-.196c.654 0 1.19.131 1.61.392.43.252.752.63.966 1.134.215.495.318 1.111.308 1.848l-.014 3.794h-1.036zm-2.1.168c-.821 0-1.465-.187-1.932-.56-.457-.383-.686-.91-.686-1.582 0-.709.234-1.251.7-1.624.476-.383 1.139-.574 1.988-.574h2.002v.938h-1.75c-.653 0-1.12.107-1.4.322-.27.215-.406.523-.406.924 0 .364.136.653.406.868.271.205.649.308 1.134.308.402 0 .752-.084 1.05-.252.299-.177.528-.425.686-.742.168-.327.252-.709.252-1.148h.476c0 .952-.214 1.713-.644 2.282-.429.56-1.054.84-1.876.84zm4.925-.168v-9.8h1.12v9.8h-1.12zm3.706 2.968c-.177 0-.383-.037-.616-.112a5.95 5.95 0 01-.742-.266l.42-.938c.215.093.401.163.56.21.168.047.299.07.392.07.252 0 .457-.07.616-.21.168-.131.308-.322.42-.574l.798-1.904 2.59-6.244h1.204l-3.36 7.98a6.977 6.977 0 01-.56 1.064 2.009 2.009 0 01-.686.686c-.271.159-.616.238-1.036.238zm1.54-2.968l-3.024-7h1.19l2.604 6.23.336.77h-1.106zm7.831.168c-.681 0-1.208-.177-1.582-.532-.373-.355-.56-.854-.56-1.498v-7.322h1.12v7.21c0 .355.094.63.28.826.196.187.467.28.812.28.112 0 .22-.014.322-.042.112-.037.257-.121.434-.252l.434.91a2.469 2.469 0 01-.658.322 1.898 1.898 0 01-.602.098zm-3.36-6.174V414h4.438v.994h-4.438zm6.089 6.006v-7h1.12v7h-1.12zm.574-8.624a.673.673 0 01-.49-.21.671.671 0 01-.21-.49c0-.196.07-.359.21-.49.14-.14.304-.21.49-.21.196 0 .36.07.49.21.14.131.21.294.21.49 0 .187-.07.35-.21.49a.641.641 0 01-.49.21zm5.732 8.792c-.69 0-1.302-.154-1.834-.462a3.341 3.341 0 01-1.246-1.302c-.298-.551-.448-1.185-.448-1.904 0-.719.145-1.353.434-1.904.299-.551.714-.98 1.246-1.288.532-.317 1.139-.476 1.82-.476.672 0 1.274.154 1.806.462.532.308.938.742 1.218 1.302l-1.022.462a2.022 2.022 0 00-.812-.868 2.3 2.3 0 00-1.218-.322c-.457 0-.863.112-1.218.336-.345.224-.62.537-.826.938-.196.392-.294.845-.294 1.358 0 .513.098.971.294 1.372.206.392.486.7.84.924.364.224.775.336 1.232.336.458 0 .864-.117 1.218-.35.364-.233.64-.56.826-.98l1.022.462a3.243 3.243 0 01-1.218 1.4c-.532.336-1.138.504-1.82.504zm6.902 0c-.513 0-.961-.075-1.344-.224a3.085 3.085 0 01-.966-.616 2.315 2.315 0 01-.546-.826l.98-.406c.159.317.397.574.714.77.318.196.668.294 1.05.294.439 0 .808-.084 1.106-.252.299-.177.448-.425.448-.742a.85.85 0 00-.336-.7c-.214-.177-.536-.322-.966-.434l-.672-.182c-.634-.168-1.129-.42-1.484-.756-.354-.345-.532-.733-.532-1.162 0-.663.215-1.176.644-1.54.439-.373 1.088-.56 1.946-.56.411 0 .784.061 1.12.182.336.121.626.294.868.518.243.215.42.471.532.77l-.98.434a1.219 1.219 0 00-.602-.686c-.28-.14-.62-.21-1.022-.21-.429 0-.765.093-1.008.28-.242.177-.364.429-.364.756 0 .187.098.364.294.532.206.159.504.289.896.392l.7.182c.458.112.84.28 1.148.504.308.215.542.462.7.742.159.28.238.579.238.896 0 .42-.112.784-.336 1.092a2.179 2.179 0 01-.91.714 3.402 3.402 0 01-1.316.238z"
+                class="svg-elem-27"
+              ></path>
+              <g filter="url(#filter1_bdddddd_1736_2)">
+                <circle
+                  cx="430"
+                  cy="370"
+                  r="22"
+                  fill="#F1F2FD"
+                  class="svg-elem-28"
+                ></circle>
+                <circle
+                  cx="430"
+                  cy="370"
+                  r="22"
+                  fill="url(#pattern1_1736_2)"
+                  fill-opacity="0.28"
+                  class="svg-elem-29"
+                ></circle>
+              </g>
+              <path
+                stroke="#6E43DC"
+                stroke-width="1.6"
+                d="M436.99 377h.01m-.01 0c-.622.618-1.751.464-2.542.464-.971 0-1.439.19-2.133.883-.59.59-1.381 1.653-2.315 1.653-.934 0-1.725-1.063-2.315-1.653-.694-.693-1.162-.883-2.133-.883-.791 0-1.92.154-2.543-.464-.627-.622-.473-1.756-.473-2.552 0-1.007-.22-1.469-.937-2.186-1.066-1.066-1.599-1.6-1.599-2.262 0-.663.533-1.196 1.599-2.262.64-.64.937-1.274.937-2.186 0-.791-.154-1.92.464-2.543.622-.627 1.756-.473 2.552-.473.912 0 1.546-.297 2.186-.937 1.066-1.066 1.599-1.599 2.262-1.599s1.196.533 2.262 1.599c.639.64 1.274.937 2.186.937.791 0 1.92-.154 2.543.464.627.622.473 1.756.473 2.552 0 1.007.22 1.469.937 2.186 1.066 1.066 1.599 1.599 1.599 2.262 0 .662-.533 1.196-1.599 2.262-.717.717-.937 1.179-.937 2.186 0 .796.154 1.93-.474 2.552z"
+                class="svg-elem-30"
+              ></path>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+                d="M427 370.893l1.8 1.607 4.2-5"
+                class="svg-elem-31"
+              ></path>
+              <path
+                fill="#303C67"
+                d="M414.802 421v-9.8h5.796v1.078h-4.606v3.164h4.2v1.064h-4.2v3.416h4.634V421h-5.824zm10.105 0l2.856-7h1.176l-2.926 7h-1.106zm-.07 0l-2.926-7h1.162l2.856 7h-1.092zm9.35 0l-.056-1.148v-2.548c0-.551-.061-1.003-.182-1.358-.122-.364-.313-.639-.574-.826-.262-.187-.602-.28-1.022-.28-.383 0-.714.079-.994.238-.271.149-.495.392-.672.728l-1.008-.392a3.22 3.22 0 01.644-.84c.252-.243.546-.425.882-.546a3.14 3.14 0 011.148-.196c.653 0 1.19.131 1.61.392.429.252.751.63.966 1.134.214.495.317 1.111.308 1.848l-.014 3.794h-1.036zm-2.1.168c-.822 0-1.466-.187-1.932-.56-.458-.383-.686-.91-.686-1.582 0-.709.233-1.251.7-1.624.476-.383 1.138-.574 1.988-.574h2.002v.938h-1.75c-.654 0-1.12.107-1.4.322-.271.215-.406.523-.406.924 0 .364.135.653.406.868.27.205.648.308 1.134.308.401 0 .751-.084 1.05-.252.298-.177.527-.425.686-.742.168-.327.252-.709.252-1.148h.476c0 .952-.215 1.713-.644 2.282-.43.56-1.055.84-1.876.84zm4.924-.168v-9.8h1.12v9.8h-1.12zm5.526.168c-.513 0-.961-.075-1.344-.224a3.085 3.085 0 01-.966-.616 2.315 2.315 0 01-.546-.826l.98-.406c.159.317.397.574.714.77.318.196.668.294 1.05.294.439 0 .808-.084 1.106-.252.299-.177.448-.425.448-.742a.85.85 0 00-.336-.7c-.214-.177-.536-.322-.966-.434l-.672-.182c-.634-.168-1.129-.42-1.484-.756-.354-.345-.532-.733-.532-1.162 0-.663.215-1.176.644-1.54.439-.373 1.088-.56 1.946-.56.411 0 .784.061 1.12.182.336.121.626.294.868.518.243.215.42.471.532.77l-.98.434a1.219 1.219 0 00-.602-.686c-.28-.14-.62-.21-1.022-.21-.429 0-.765.093-1.008.28-.242.177-.364.429-.364.756 0 .187.098.364.294.532.206.159.504.289.896.392l.7.182c.458.112.84.28 1.148.504.308.215.542.462.7.742.159.28.238.579.238.896 0 .42-.112.784-.336 1.092a2.179 2.179 0 01-.91.714 3.402 3.402 0 01-1.316.238z"
+                class="svg-elem-32"
+              ></path>
+              <g filter="url(#filter2_bdddddd_1736_2)">
+                <circle
+                  cx="520.5"
+                  cy="370"
+                  r="22"
+                  fill="#F1F2FD"
+                  class="svg-elem-33"
+                ></circle>
+                <circle
+                  cx="520.5"
+                  cy="370"
+                  r="22"
+                  fill="url(#pattern2_1736_2)"
+                  fill-opacity="0.28"
+                  class="svg-elem-34"
+                ></circle>
+              </g>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M517.483 360c-2.806.064-4.445.331-5.565 1.447-.981.977-1.308 2.35-1.418 4.553m13.017-6c2.806.064 4.445.331 5.566 1.447.98.977 1.308 2.35 1.417 4.553m-6.983 14c2.806-.064 4.445-.331 5.566-1.447.98-.977 1.308-2.35 1.417-4.553m-13.017 6c-2.806-.064-4.445-.331-5.565-1.447-.981-.977-1.308-2.35-1.418-4.553"
+                class="svg-elem-35"
+              ></path>
+              <path
+                stroke="#6E43DC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M523.5 373l2 2m-1-5.5a4.5 4.5 0 10-9 0 4.5 4.5 0 009 0z"
+                class="svg-elem-36"
+              ></path>
+              <path
+                fill="#303C67"
+                d="M487.302 421v-9.8h1.232l3.388 5.012 3.388-5.012h1.218v9.8h-1.176v-7.896l-3.43 5.11-3.43-5.082V421h-1.19zm14.612.168c-.681 0-1.288-.154-1.82-.462a3.37 3.37 0 01-1.232-1.302c-.299-.551-.448-1.185-.448-1.904 0-.719.145-1.353.434-1.904.299-.551.709-.98 1.232-1.288a3.46 3.46 0 011.806-.476c.691 0 1.297.159 1.82.476.532.308.943.737 1.232 1.288.299.551.448 1.185.448 1.904 0 .719-.149 1.353-.448 1.904a3.266 3.266 0 01-1.218 1.302c-.523.308-1.125.462-1.806.462zm0-1.036c.467 0 .873-.112 1.218-.336.345-.224.616-.532.812-.924.205-.392.308-.849.308-1.372 0-.523-.103-.98-.308-1.372a2.264 2.264 0 00-.826-.924 2.258 2.258 0 00-1.232-.336c-.457 0-.863.112-1.218.336a2.406 2.406 0 00-.826.924c-.196.392-.294.849-.294 1.372 0 .513.098.971.294 1.372.205.392.485.7.84.924.364.224.775.336 1.232.336zm5.027.868v-7h1.05l.07 1.288V421h-1.12zm4.914 0v-3.584h1.12V421h-1.12zm0-3.584c0-.691-.079-1.218-.238-1.582-.159-.364-.378-.611-.658-.742-.28-.14-.597-.21-.952-.21-.616 0-1.097.219-1.442.658-.336.429-.504 1.041-.504 1.834h-.546c0-.737.107-1.372.322-1.904.215-.532.527-.938.938-1.218.411-.28.905-.42 1.484-.42.551 0 1.027.112 1.428.336.411.215.728.56.952 1.036.233.476.345 1.101.336 1.876v.336h-1.12zm2.963 3.584v-7h1.12v7h-1.12zm.574-8.624a.671.671 0 01-.49-.21.671.671 0 01-.21-.49c0-.196.07-.359.21-.49.14-.14.303-.21.49-.21.196 0 .359.07.49.21.14.131.21.294.21.49 0 .187-.07.35-.21.49a.643.643 0 01-.49.21zm5.241 8.792c-.681 0-1.208-.177-1.582-.532-.373-.355-.56-.854-.56-1.498v-7.322h1.12v7.21c0 .355.094.63.28.826.196.187.467.28.812.28.112 0 .22-.014.322-.042.112-.037.257-.121.434-.252l.434.91a2.469 2.469 0 01-.658.322 1.898 1.898 0 01-.602.098zm-3.36-6.174V414h4.438v.994h-4.438zm9.072 6.174c-.681 0-1.288-.154-1.82-.462a3.378 3.378 0 01-1.232-1.302c-.298-.551-.448-1.185-.448-1.904 0-.719.145-1.353.434-1.904.299-.551.71-.98 1.232-1.288a3.46 3.46 0 011.806-.476c.691 0 1.298.159 1.82.476.532.308.943.737 1.232 1.288.299.551.448 1.185.448 1.904 0 .719-.149 1.353-.448 1.904a3.266 3.266 0 01-1.218 1.302c-.522.308-1.124.462-1.806.462zm0-1.036c.467 0 .873-.112 1.218-.336.346-.224.616-.532.812-.924.206-.392.308-.849.308-1.372 0-.523-.102-.98-.308-1.372a2.264 2.264 0 00-.826-.924 2.255 2.255 0 00-1.232-.336c-.457 0-.863.112-1.218.336-.345.224-.62.532-.826.924-.196.392-.294.849-.294 1.372 0 .513.098.971.294 1.372.206.392.486.7.84.924.364.224.775.336 1.232.336zm5.644-2.926c0-.756.144-1.367.434-1.834.289-.476.658-.826 1.106-1.05.457-.233.938-.35 1.442-.35v1.05c-.411 0-.808.07-1.19.21-.374.131-.682.35-.924.658-.243.308-.364.728-.364 1.26l-.504.056zm-.616 3.794v-7h1.12v7h-1.12zm4.8 0v-7h1.12v7h-1.12zm.574-8.624a.671.671 0 01-.49-.21.671.671 0 01-.21-.49c0-.196.07-.359.21-.49.14-.14.303-.21.49-.21.196 0 .359.07.49.21.14.131.21.294.21.49 0 .187-.07.35-.21.49a.643.643 0 01-.49.21zm2.61 8.624v-7h1.05l.07 1.288V421h-1.12zm4.914 0v-3.584h1.12V421h-1.12zm0-3.584c0-.691-.079-1.218-.238-1.582-.159-.364-.378-.611-.658-.742-.28-.14-.597-.21-.952-.21-.616 0-1.097.219-1.442.658-.336.429-.504 1.041-.504 1.834h-.546c0-.737.107-1.372.322-1.904.215-.532.527-.938.938-1.218.411-.28.905-.42 1.484-.42.551 0 1.027.112 1.428.336.411.215.728.56.952 1.036.233.476.345 1.101.336 1.876v.336h-1.12zm5.693 6.552c-.448 0-.859-.047-1.232-.14a5.584 5.584 0 01-.938-.294 3.31 3.31 0 01-.546-.266l.42-.91c.121.065.294.145.518.238.224.103.485.187.784.252.308.075.634.112.98.112.448 0 .849-.093 1.204-.28.364-.177.644-.462.84-.854.205-.383.308-.877.308-1.484V414h1.12v6.328c0 .803-.15 1.475-.448 2.016-.299.541-.71.947-1.232 1.218-.523.271-1.116.406-1.778.406zm-.042-3.024c-.626 0-1.176-.149-1.652-.448a3.085 3.085 0 01-1.12-1.246c-.262-.541-.392-1.157-.392-1.848 0-.709.13-1.33.392-1.862.27-.541.644-.961 1.12-1.26.476-.299 1.026-.448 1.652-.448.588 0 1.101.149 1.54.448.438.299.779.719 1.022 1.26.252.532.378 1.153.378 1.862 0 .7-.126 1.316-.378 1.848-.243.532-.584.947-1.022 1.246-.439.299-.952.448-1.54.448zm.266-.966c.41 0 .774-.112 1.092-.336.317-.224.564-.527.742-.91.177-.392.266-.845.266-1.358 0-.495-.094-.933-.28-1.316a2.132 2.132 0 00-.742-.91 1.806 1.806 0 00-1.092-.336c-.439 0-.831.112-1.176.336a2.24 2.24 0 00-.798.91c-.187.383-.28.821-.28 1.316 0 .513.098.966.294 1.358.196.383.462.686.798.91.345.224.737.336 1.176.336z"
+                class="svg-elem-37"
+              ></path>
+              <defs>
+                <filter
+                  id="filter0_bdddddd_1736_2"
+                  width="204"
+                  height="228"
+                  x="237"
+                  y="344"
+                  color-interpolation-filters="sRGB"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                  <feGaussianBlur
+                    in="BackgroundImageFix"
+                    stdDeviation="2"
+                  ></feGaussianBlur>
+                  <feComposite
+                    in2="SourceAlpha"
+                    operator="in"
+                    result="effect1_backgroundBlur_1736_2"
+                  ></feComposite>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="2.767"></feOffset>
+                  <feGaussianBlur stdDeviation="1.107"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0281146 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect1_backgroundBlur_1736_2"
+                    result="effect2_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="6.65"></feOffset>
+                  <feGaussianBlur stdDeviation="2.66"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0403893 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect2_dropShadow_1736_2"
+                    result="effect3_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="12.522"></feOffset>
+                  <feGaussianBlur stdDeviation="5.009"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.05 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect3_dropShadow_1736_2"
+                    result="effect4_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="22.336"></feOffset>
+                  <feGaussianBlur stdDeviation="8.935"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0596107 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect4_dropShadow_1736_2"
+                    result="effect5_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="41.778"></feOffset>
+                  <feGaussianBlur stdDeviation="16.711"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0718854 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect5_dropShadow_1736_2"
+                    result="effect6_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="100"></feOffset>
+                  <feGaussianBlur stdDeviation="40"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.1 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect6_dropShadow_1736_2"
+                    result="effect7_dropShadow_1736_2"
+                  ></feBlend>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="effect7_dropShadow_1736_2"
+                    result="shape"
+                  ></feBlend>
+                </filter>
+                <pattern
+                  id="pattern0_1736_2"
+                  width="6.982"
+                  height="6.982"
+                  patternContentUnits="objectBoundingBox"
+                >
+                  <use transform="scale(.00682)" xlink:href="#image0_1736_2"></use>
+                </pattern>
+                <filter
+                  id="filter1_bdddddd_1736_2"
+                  width="204"
+                  height="228"
+                  x="328"
+                  y="344"
+                  color-interpolation-filters="sRGB"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                  <feGaussianBlur
+                    in="BackgroundImageFix"
+                    stdDeviation="2"
+                  ></feGaussianBlur>
+                  <feComposite
+                    in2="SourceAlpha"
+                    operator="in"
+                    result="effect1_backgroundBlur_1736_2"
+                  ></feComposite>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="2.767"></feOffset>
+                  <feGaussianBlur stdDeviation="1.107"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0281146 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect1_backgroundBlur_1736_2"
+                    result="effect2_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="6.65"></feOffset>
+                  <feGaussianBlur stdDeviation="2.66"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0403893 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect2_dropShadow_1736_2"
+                    result="effect3_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="12.522"></feOffset>
+                  <feGaussianBlur stdDeviation="5.009"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.05 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect3_dropShadow_1736_2"
+                    result="effect4_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="22.336"></feOffset>
+                  <feGaussianBlur stdDeviation="8.935"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0596107 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect4_dropShadow_1736_2"
+                    result="effect5_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="41.778"></feOffset>
+                  <feGaussianBlur stdDeviation="16.711"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0718854 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect5_dropShadow_1736_2"
+                    result="effect6_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="100"></feOffset>
+                  <feGaussianBlur stdDeviation="40"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.1 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect6_dropShadow_1736_2"
+                    result="effect7_dropShadow_1736_2"
+                  ></feBlend>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="effect7_dropShadow_1736_2"
+                    result="shape"
+                  ></feBlend>
+                </filter>
+                <pattern
+                  id="pattern1_1736_2"
+                  width="6.982"
+                  height="6.982"
+                  patternContentUnits="objectBoundingBox"
+                >
+                  <use transform="scale(.00682)" xlink:href="#image0_1736_2"></use>
+                </pattern>
+                <filter
+                  id="filter2_bdddddd_1736_2"
+                  width="204"
+                  height="228"
+                  x="418.5"
+                  y="344"
+                  color-interpolation-filters="sRGB"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                  <feGaussianBlur
+                    in="BackgroundImageFix"
+                    stdDeviation="2"
+                  ></feGaussianBlur>
+                  <feComposite
+                    in2="SourceAlpha"
+                    operator="in"
+                    result="effect1_backgroundBlur_1736_2"
+                  ></feComposite>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="2.767"></feOffset>
+                  <feGaussianBlur stdDeviation="1.107"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0281146 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect1_backgroundBlur_1736_2"
+                    result="effect2_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="6.65"></feOffset>
+                  <feGaussianBlur stdDeviation="2.66"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0403893 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect2_dropShadow_1736_2"
+                    result="effect3_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="12.522"></feOffset>
+                  <feGaussianBlur stdDeviation="5.009"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.05 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect3_dropShadow_1736_2"
+                    result="effect4_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="22.336"></feOffset>
+                  <feGaussianBlur stdDeviation="8.935"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0596107 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect4_dropShadow_1736_2"
+                    result="effect5_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="41.778"></feOffset>
+                  <feGaussianBlur stdDeviation="16.711"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.0718854 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect5_dropShadow_1736_2"
+                    result="effect6_dropShadow_1736_2"
+                  ></feBlend>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  ></feColorMatrix>
+                  <feOffset dy="100"></feOffset>
+                  <feGaussianBlur stdDeviation="40"></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176 0 0 0 0 0.266667 0 0 0 0 0.341176 0 0 0 0.1 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    in2="effect6_dropShadow_1736_2"
+                    result="effect7_dropShadow_1736_2"
+                  ></feBlend>
+                  <feBlend
+                    in="SourceGraphic"
+                    in2="effect7_dropShadow_1736_2"
+                    result="shape"
+                  ></feBlend>
+                </filter>
+                <pattern
+                  id="pattern2_1736_2"
+                  width="6.982"
+                  height="6.982"
+                  patternContentUnits="objectBoundingBox"
+                >
+                  <use transform="scale(.00682)" xlink:href="#image0_1736_2"></use>
+                </pattern>
+                <radialGradient
+                  id="paint0_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(-63.4898 0 0 -25.5 337.268 175.383)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint1_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(0 -61.9286 25.5 0 430.617 286.557)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint2_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(0 -25.5 25.5 0 430.617 342.288)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint3_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="rotate(.32 -31396.35 84435.643) scale(93.1545 25.5)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint4_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(22.3776 0 0 25.5 369.135 320.617)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint5_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(-4.12902 -19.11687 21.28928 -4.59824 518 336.5)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint6_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(54.1225 0 0 25.5 506.001 144.617)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint7_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(0 -27.0656 25.5 0 633.155 108.003)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint8_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(-49.4388 0 0 -25.5 359.865 211.383)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint9_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(0 26.0204 -25.5 0 223.383 244.808)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint10_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(-34.8673 0 0 -25.5 244.557 175.383)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint11_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="matrix(0 -28.102 25.5 0 224.617 111.807)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint12_radial_1736_2"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientTransform="rotate(66.371 135.66 562.912) scale(17.4643 1255.53)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#7A4DEE"></stop>
+                  <stop offset="1" stop-color="#7A4DEE" stop-opacity="0"></stop>
+                </radialGradient>
+              </defs>
+            </svg>
+            <img
+              alt="src"
+              loading="eager"
+              decoding="async"
+              data-nimg="fill"
+              style="
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                right: 0%;
+                bottom: 0;
+                object-fit: contain;
+                color: transparent;
+                transform: translate(40%, -52%);
+              "
+              sizes="100vw"
+              src="/partners-right.png"
+              fetchpriority="high"
+            />
+            <img
+              alt="src"
+              src="/chip.png"
+              style="
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                height: 50%;
+                transform: translate(-50%, -50%);
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section 1: Core Loop -->
+      <section class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="lg:text-center animate-on-scroll">
+            <h2
+              class="text-base font-semibold text-blue-600 tracking-wide uppercase"
+            >
+              How it works
+            </h2>
+            <p
+              class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              From Data to Decision in 3 Steps
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+              Spend less time wrangling data and more time acting on it.
+            </p>
+          </div>
+
+          <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Step 1 -->
+            <div class="text-center animate-on-scroll delay-100">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-xl bg-blue-100 text-blue-600 mx-auto mb-6 shadow-lg"
+              >
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">
+                1. Upload Your Data
+              </h3>
+              <p class="mt-2 text-base text-gray-600">
+                Upload CSV, Excel, or JSON files. Your data is stored securely
+                in an SQLite database for instant querying.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="text-center animate-on-scroll delay-200">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-xl bg-blue-100 text-blue-600 mx-auto mb-6 shadow-lg"
+              >
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0v.75A.75.75 0 013 6h-.75m0 0H2.25m1.5.001L2.25 6h-.75m.75 0v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0H3.75m0 0v.75A.75.75 0 013 6h-.75m0 0H2.25M12 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75m-16.5 0c.221.015.442.03.663.045m15.114 0c.221-.015.442-.03.663-.045m-15.776 0c.221.015.442.03.663.045m15.114 0c.221-.015.442-.03.663-.045m-15.776 0c.221.015.442.03.663.045m15.114 0c.221-.015.442-.03.663-.045m-15.776 0c.221.015.442.03.663.045m15.114 0c.221-.015.442-.03.663-.045M3.75 6H2.25m1.5.001L2.25 6h-.75m.75 0v-.75A.75.75 0 013 4.5h.75m0 0v.75A.75.75 0 013 6h-.75M12 3.75a.75.75 0 01.75.75v.75c0 .414-.336.75-.75.75h-.75a.75.75 0 01-.75-.75v-.75c0-.414.336.75.75-.75h.75z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 12.75a.75.75 0 01.75.75v.75c0 .414-.336.75-.75.75h-.75a.75.75 0 01-.75-.75v-.75c0-.414.336.75.75-.75h.75zM12 15.75a.75.75 0 01.75.75v.75c0 .414-.336.75-.75.75h-.75a.75.75 0 01-.75-.75v-.75c0-.414.336.75.75-.75h.75z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">
+                2. Ask in Plain English
+              </h3>
+              <p class="mt-2 text-base text-gray-600">
+                No SQL knowledge needed. Tag your dataset with @ and ask questions
+                in natural language. The AI generates and executes queries automatically.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="text-center animate-on-scroll delay-300">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-xl bg-blue-100 text-blue-600 mx-auto mb-6 shadow-lg"
+              >
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H4.5a.75.75 0 01-.75-.75zM3.75 8.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H4.5A.75.75 0 013.75 8.25zM3.75 15.75a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H4.5a.75.75 0 01-.75-.75z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">
+                3. Get Instant Insights
+              </h3>
+              <p class="mt-2 text-base text-gray-600">
+                Receive AI-generated insights with automatic chart visualizations.
+                Export conversations to PDF for easy sharing and documentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section 2: Laptop Demo -->
+      <section id="demo" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+            <h2
+              class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              See AskQL in Action
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+              See how you can upload data, ask questions in plain English,
+              and get instant insights with interactive visualizations.
+            </p>
+          </div>
+
+          <!-- Laptop Mockup -->
+          <div class="mt-20 animate-on-scroll delay-200">
+            <div class="laptop-mockup">
+              <div class="laptop-screen">
+                <video 
+                  class="laptop-video-placeholder" 
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                >
+                  <source src="/intro.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section 3: Interactive Graph -->
+      <section class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Text Content -->
+            <div class="animate-on-scroll">
+              <span
+                class="text-base font-semibold text-blue-600 tracking-wide uppercase"
+                >Interactive Visualizations</span
+              >
+              <h2
+                class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Don't just see your data.
+                <br />
+                Interact with it.
+              </h2>
+              <p class="mt-4 text-xl text-gray-600">
+                AskQL generates stunning, interactive charts on the fly. Hover
+                over data points to get granular insights, filter on the-fly,
+                and export for your reports.
+              </p>
+              <ul class="mt-8 space-y-4 text-gray-600">
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Generate charts from simple prompts like "Show me monthly
+                    user growth".</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Hover to reveal detailed tooltips and data points.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Export as PNG, JSON, or add directly to your AI-generated
+                    report.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Interactive Chart -->
+            <div
+              id="interactive-chart-container"
+              class="animate-on-scroll delay-200"
+            >
+              <svg id="interactive-chart"></svg>
+              <div class="chart-tooltip"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- START: Video/Description Sections -->
+
+      <!-- Feature Section: Video/Desc 1 -->
+      <section class="py-24 sm:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Video Placeholder -->
+            <!-- UPDATED: Added 2-div structure for blur effect -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl"
+            >
+              <div
+                class="relative z-10 aspect-video bg-gray-200 rounded-2xl border border-gray-300 shadow-lg flex items-center justify-center overflow-hidden"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="/Intro1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <!-- Text Content -->
+            <div class="animate-on-scroll delay-100">
+              <span
+                class="text-base font-semibold text-blue-600 tracking-wide uppercase"
+                >Feature Focus</span
+              >
+              <h2
+                class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Natural Language Queries
+              </h2>
+              <p class="mt-4 text-xl text-gray-600">
+                Using advanced AI models, AskQL translates your questions into
+                SQL queries automatically. Just describe what you need in plain English.
+              </p>
+              <ul class="mt-8 space-y-4 text-gray-600">
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Handles typos, synonyms, and complex sentence
+                    structures.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Maintains context across multiple queries for a true
+                    conversational flow.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section: Desc/Video 2 -->
+      <section class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Video Placeholder (Order changed) -->
+            <!-- UPDATED: Added 2-div structure for blur effect -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl md:order-2"
+            >
+              <div
+                class="relative z-10 aspect-video bg-gray-200 rounded-2xl border border-gray-300 shadow-lg flex items-center justify-center overflow-hidden"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="/Intro2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <!-- Text Content (Order changed) -->
+            <div class="animate-on-scroll delay-100 md:order-1">
+              <span
+                class="text-base font-semibold text-blue-600 tracking-wide uppercase"
+                >Smart Reports</span
+              >
+              <h2
+                class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Conversation History & Export
+              </h2>
+              <p class="mt-4 text-xl text-gray-600">
+                All your conversations are saved and searchable. Export your
+                analysis sessions to PDF format for documentation and sharing.
+              </p>
+              <ul class="mt-8 space-y-4 text-gray-600">
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Export conversations to PDF with all charts and insights intact.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Organize conversations by project for easy reference and team collaboration.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section: Video/Desc 3 -->
+      <section class="py-24 sm:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Video Placeholder -->
+            <!-- UPDATED: Added 2-div structure for blur effect -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl"
+            >
+              <div
+                class="relative z-10 aspect-video bg-gray-200 rounded-2xl border border-gray-300 shadow-lg flex items-center justify-center overflow-hidden"
+              >
+                <video
+                  class="w-full h-full object-cover"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                >
+                  <source src="/Intro3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <!-- Text Content -->
+            <div class="animate-on-scroll delay-100">
+              <span
+                class="text-base font-semibold text-blue-600 tracking-wide uppercase"
+                >Chat History</span
+              >
+              <h2
+                class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Two Powerful Modes
+              </h2>
+              <p class="mt-4 text-xl text-gray-600">
+                Ask Mode for safe data exploration and analysis. Agent Mode for
+                data modifications with human-in-the-loop confirmation before any changes.
+              </p>
+              <ul class="mt-8 space-y-4 text-gray-600">
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Ask Mode: Read-only queries with automatic visualizations and insights.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="flex-shrink-0 h-6 w-6 text-blue-500 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span
+                    >Agent Mode: Create, update, or delete records with required user confirmation.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Video/Description Sections -->
+
+      <!-- Feature Section 4: Advanced Grid -->
+      <section id="features" class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="lg:text-center animate-on-scroll">
+            <h2
+              class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              A Full Data-Analysis Suite
+            </h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+              AskQL is more than a chatbot. It's an ecosystem of powerful,
+              interconnected data tools.
+            </p>
+          </div>
+
+          <div
+            class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Feature Card 1: SQL Generation -->
+            <!-- UPDATED: Added 2-div structure for blur effect -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-100"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 21.75V2.25a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 2.25z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  Automatic SQL Generation
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  AI translates your natural language questions into optimized SQL queries
+                  and executes them against your SQLite database automatically.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="1.png"
+                    alt="SQL Generation"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Card 2: Predictive Forecasting -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-200"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  Multi-Model AI Support
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  Choose from Google Gemini, OpenAI GPT, Anthropic Claude, or DeepSeek.
+                  Switch models anytime to match your task complexity and budget.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="2.png"
+                    alt="Predictive Forecasting"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Card 3: AI Agent Mode -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-300"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.624L16.5 21.75l-.398-1.126a3.375 3.375 0 00-2.456-2.456L12.5 18l1.126-.398a3.375 3.375 0 002.456-2.456L16.5 14.25l.398 1.126a3.375 3.375 0 002.456 2.456L20.5 18l-1.126.398a3.375 3.375 0 00-2.456 2.456z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  Autonomous Agent Mode
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  Let AI modify your data safely. Agent proposes CREATE, UPDATE, or DELETE
+                  operations and waits for your approval before executing.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="3.png"
+                    alt="AI Agent Mode"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Card 4: Anomaly Detection -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-400"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  Automatic Visualizations
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  Get instant charts based on query results. Bar, line, pie, area,
+                  and scatter plots are generated automatically when appropriate.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="4.png"
+                    alt="Anomaly Detection"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Card 5: Image Recognition -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-500"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  File Attachments
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  Attach images and documents to your queries for context.
+                  The AI can analyze visual content alongside your data.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="5.png"
+                    alt="Image Recognition"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Card 6: Text-to-Speech -->
+            <div
+              class="relative overflow-hidden animate-on-scroll hover-blur-effect rounded-2xl delay-600"
+            >
+              <div
+                class="relative z-10 bg-white rounded-2xl p-8 shadow-lg shadow-gray-200/50 border border-gray-200/80 transition-all transform hover:-translate-y-1 hover:shadow-xl h-full"
+              >
+                <div
+                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="mt-6 text-xl font-bold text-gray-900">
+                  Text-to-Speech
+                </h3>
+                <p class="mt-2 text-base text-gray-600">
+                  Have your reports read back to you. Perfect for accessibility
+                  and multitasking.
+                </p>
+                <div
+                  class="mt-4 h-40 rounded-lg overflow-hidden border border-gray-300"
+                >
+                  <img
+                    src="6.png"
+                    alt="Text-to-Speech"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrations / AI Model Selection -->
+      <section id="integrations" class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+            <h2
+              class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Powered by Leading AI Models
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+              Use your own API keys to access multiple AI providers. Switch between
+              models based on your needs for speed, accuracy, or cost.
+            </p>
+          </div>
+          <!-- Model Logos -->
+          <div class="mt-16 animate-on-scroll delay-200">
+            <div
+              class="flex justify-center items-center gap-10 md:gap-16 flex-wrap"
+            >
+              <!-- Placeholder Logos for AI Models -->
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/provider-gemini.png"
+                  alt="Gemini Logo"
+                  class="h-10 w-10 rounded-full"
+                />
+                <span class="text-xl font-semibold text-gray-700">Gemini</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/provider-claude.png"
+                  alt="Claude Logo"
+                  class="h-10 w-10 rounded-full"
+                />
+                <span class="text-xl font-semibold text-gray-700">Claude</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/provider-chatgpt.png"
+                  alt="OpenAI Logo"
+                  class="h-10 w-10 rounded-full"
+                />
+                <span class="text-xl font-semibold text-gray-700">OpenAI</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  src="/provider-deepseek.png"
+                  alt="DeepSeek Logo"
+                  class="h-10 w-10 rounded-full"
+                />
+                <span class="text-xl font-semibold text-gray-700">DeepSeek</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
